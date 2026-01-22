@@ -33,10 +33,18 @@ import java.util.Scanner;
 public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+	
 		int x = input.nextInt();
-		
-		double A = x/7;
+		String sentence = input.nextLine();
+		int[] assignment = new int[7];
+    			for (int i = 0; i < assignment.length; ++i) {
+      				assignment[i] = i + 1;
+    			}	
+		double A = assignment[i]/size[7];
+
 		int y = input.nextInt();
+		String sentence = input.nextLine();
+		
 		double T = y/7;
 		double F;
 		double M;
