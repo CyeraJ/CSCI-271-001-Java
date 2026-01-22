@@ -34,7 +34,14 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int x = input.nextInt();
-		String sentence = input.nextLine();
+		string sentence = input.nextLine();
+		double E = (0.4 * F + 0.2 * M + 0.1 * T)/70
+		double G;
+rade		if ( E < 60) {
+		
+		} 
+
+	//print statements system print etc....
 		input.close(); // Make sure to always
 			// close your input objects
 	}
