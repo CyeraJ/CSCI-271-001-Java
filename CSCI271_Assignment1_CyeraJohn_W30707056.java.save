@@ -38,27 +38,12 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 		double E = (0.4 * F + 0.2 * M + 0.1 * T)/70
 		double G;
 		if ( E < 60) {
-		
+			grade = E
 		} 
+		else if ( E <
 
 	//print statements system print etc....
 		input.close(); // Make sure to always
 			// close your input objects
 	}
 }
-
-
-// int testScore = 76;
-//char grade;
-//if (testScore >= 90) {
-//grade = 'A';
-//} else if (testScore >= 80) {
-//grade = 'B';
-//} else if (testScore >= 70) {
-//grade = 'C';
-//} else if (testScore >= 60) {
-//grade = 'D';
-//} else {
-//grade = 'F';
-//}
-//System.out.println("Grade = " + grade)
