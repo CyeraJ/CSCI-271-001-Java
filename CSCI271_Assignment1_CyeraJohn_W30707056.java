@@ -31,6 +31,20 @@
 import java.util.Scanner;
 
 public class CSCI271_Assignment1_CyeraJohn_W30707056 {
+/*****************************<main>****************************
+* Description: the main function of the code takes in arguements.
+*
+* Parameters: arguements
+*
+* Pre: class has to be made before anything
+*
+* Post: main code will have finished running as long as bracket is closed.
+*
+* Returns: nothing it is void.
+*
+* Called by: n/a
+* Calls: n/a
+************************************************************************/
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int[] assignment = new int[7];
@@ -43,7 +57,6 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 
     			} 
 		int A = totalassign / 7; //did this instead of the number 7 because 
-		System.out.println(A);
 					
 		
 		int[] test = new int[7];
@@ -55,12 +68,9 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
                  		totaltest += y;
             		} 
 		int T = totaltest / 7;
-		System.out.println(T);	
 
 		int M = input.nextInt(); 
 		int F = input.nextInt();			
-		System.out.println(M);
-		System.out.println(F);
 
 
 		double E = ((0.4 * F)+(0.2 * M)+(0.1 * T))/0.7; //figured out the bug was turning 70 to 0.7
@@ -69,7 +79,7 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 			if ( E < 60) {
 				G = E;
 				System.out.println(G);
-				System.out.println("FInal grade = F");
+				System.out.println("Final grade = F");
 			}	 
 			else if ( E < 80 && E >= 60) {
 				G = (1-W) * E + (W*A);
