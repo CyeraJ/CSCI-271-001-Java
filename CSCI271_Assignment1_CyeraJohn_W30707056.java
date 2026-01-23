@@ -7,8 +7,8 @@
 * Date: January 21, 2026
 *
 * Purpose
-* My program reads a list of scores from an input file, counts how many
-* scores there are in the list, and computes their sum and average.
+* My program reads a list of scores from an input file, computes the sum and average of the first and second
+* set of 7 numbers, reads the next two numbers then calculates and prints a grade.
 *
 *************************************************************************/
 /*******************************************************************
@@ -30,7 +30,7 @@
 ********************************************************************/
 import java.util.Scanner;
 
-public class CSCI271_Assignment1_CyeraJohn_W30707056 {
+public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course notes */
 /*****************************<main>****************************
 * Description: the main function of the code takes in arguements.
 *
@@ -45,23 +45,23 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 * Called by: n/a
 * Calls: n/a
 ************************************************************************/
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		int[] assignment = new int[7];
-		int x = 0;
-		int totalassign = 0;
-    			for (int i = 0; i < 7; i++) {
-				x = input.nextInt();
-      				assignment[i] = x;
-				totalassign += x;
-
-    			} 
-		int A = totalassign / 7; //did this instead of the number 7 because 
+	public static void main(String[] args) { //obtained from course notes
+		Scanner input = new Scanner(System.in); // obtained from notes reads input
+		int[] assignment = new int[7]; //initialize an array limit is 7
+		int x = 0;//initialize x to be used for the loop
+		int totalassign = 0; //initialize totalassign to be used for the loop
+// for loop reads the first 7 numbers then adds them together, totalassign holds the sum
+		for (int i = 0; i < 7; i++) {
+			x = input.nextInt();
+      			assignment[i] = x;
+			totalassign += x;
+    		} 
+		int A = totalassign / 7; // takes the sum in totalassign and divides by 7 to get the average 
 					
 		
-		int[] test = new int[7];
-		int y = 0;
-	        int totaltest = 0;
+		int[] test = new int[7]; //initialize another array limit is 7
+		int y = 0; //initialize y to be used for the loop
+	        int totaltest = 0; //initialize totaltest to be used for the loop
 			for (int i = 0; i < 7; i++) {
                     		y = input.nextInt();
         		        test[i] = y;
