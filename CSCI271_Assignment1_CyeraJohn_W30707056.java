@@ -53,24 +53,22 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course n
 // for loop reads the first 7 numbers then adds them together, totalassign holds the sum
 		for (int i = 0; i < 7; i++) { //combined array example and input example from class, reads until it hits the 7th number
 			x = input.nextInt(); // grabs the next integer until limit is reached
-      			assignment[i] = x; // stores into array
+      		assignment[i] = x; // stores into array
 			totalassign += x;// add all items in array
-    		} 
-		int A = totalassign / 7; // takes the sum in totalassign and divides by 7 to get the average 
-					
+    	} 
+		int A = totalassign / 7; // takes the sum in totalassign and divides by 7 to get the average 			
 		
 		int[] test = new int[7]; //initialize another array limit is 7
 		int y = 0; //initialize y to be used for the loop
-	        int totaltest = 0; //initialize totaltest to be used for the loop
+	    int totaltest = 0; //initialize totaltest to be used for the loop
 // for loop reads the first 7 numbers then adds them together, totalassign holds the sum
 		for (int i = 0; i < 7; i++) { //reads next set of 7 numbers increasing
-                  	y = input.nextInt(); // grabs the next integer until limit is reached
-        		test[i] = y; // stores into array
-                 	totaltest += y; // add all items in array
-            	}
+            y = input.nextInt(); // grabs the next integer until limit is reached
+        	test[i] = y; // stores into array
+            totaltest += y; // add all items in array
+        }
  
 		int T = totaltest / 7; // takes the sum in totaltest and divides by 7 to get the average
-
 		int M = input.nextInt(); //grabs next number
 		int F = input.nextInt(); //grabs final number			
 
