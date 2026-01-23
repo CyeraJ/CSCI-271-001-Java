@@ -47,7 +47,7 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course n
 ************************************************************************/
 	public static void main(String[] args) { //obtained from course notes
 		Scanner input = new Scanner(System.in); // obtained from notes reads input
-		int[] assignment = new int[7]; //initialize an array limit is 7
+		int[] assignment = new int[7]; //initialize an array limit is 7 also used class examples for this array
 		int x = 0;//initialize x to be used for the loop
 		int totalassign = 0; //initialize totalassign to be used for the loop
 // for loop reads the first 7 numbers then adds them together, totalassign holds the sum
