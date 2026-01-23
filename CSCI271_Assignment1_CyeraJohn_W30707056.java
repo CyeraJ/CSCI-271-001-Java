@@ -33,52 +33,66 @@ import java.util.Scanner;
 public class CSCI271_Assignment1_CyeraJohn_W30707056 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-	
-		int x = input.nextInt();
-		String sentence = input.nextLine();
 		int[] assignment = new int[7];
-    			for (int i = 0; i < assignment.length; ++i) {
-      				assignment[i] = i + 1;
-    			}	
-		double A = assignment[i]/size[7];
+		int x = 0;
+		int totalassign = 0;
+    			for (int i = 0; i < 7; i++) {
+				x = input.nextInt();
+      				assignment[i] = x;
+				totalassign += x;
 
-		int y = input.nextInt();
-		String sentence = input.nextLine();
+    			} 
+		int A = totalassign / 7; //did this instead of the number 7 because 
+		System.out.println(A);
+					
 		
-		double T = y/7;
-		double F;
-		double M;
-		double E = ((0.4 * F)+(0.2 * M)+(0.1 * T))/70;
+		int[] test = new int[7];
+		int y = 0;
+	        int totaltest = 0;
+			for (int i = 0; i < 7; i++) {
+                    		y = input.nextInt();
+        		        test[i] = y;
+                 		totaltest += y;
+            		} 
+		int T = totaltest / 7;
+		System.out.println(T);	
+
+		int M = input.nextInt(); 
+		int F = input.nextInt();			
+		System.out.println(M);
+		System.out.println(F);
+
+
+		double E = ((0.4 * F)+(0.2 * M)+(0.1 * T))/0.7; //figured out the bug was turning 70 to 0.7
 		double W = ((E-60)/20) * 0.3;
-		double G;
-		if ( E < 60) {
-			G = E;
-		} 
-		else if ( E < 80 && E >= 60) {
-			G = (1-W) * E + (W*A);
-		}
-		else if ( E >= 80) {
-			G = (0.4 * F)+(0.2 * M)+(0.1 * T)+(0.3 * A);
-		}
-		System.out.println("Grade = " + G);
-	//print statements system print etc....
-		input.close(); // Make sure to always
-			// close your input objects
-	}
+		double G = 0;
+			if ( E < 60) {
+				G = E;
+				System.out.println(G);
+				System.out.println("FInal grade = F");
+			}	 
+			else if ( E < 80 && E >= 60) {
+				G = (1-W) * E + (W*A);
+				if (G <=79 && G >= 60) {
+					System.out.println(G);
+					System.out.println("Final Grade = D");
+				}
+				else {
+					System.out.println(G);
+					System.out.println("Final Grade = C");
+				}
+			}
+			else if ( E >= 80) {
+				G = (0.4 * F)+(0.2 * M)+(0.1 * T)+(0.3 * A);
+				if (G <= 89 && G >= 80) {
+					System.out.println(G);
+					System.out.println("Final Grade = B");
+				}
+				else {
+					System.out.println(G);
+					System.out.println("Final Grade = A");
+				}
+			}
+
+	}	
 }
-
-
-// int testScore = 76;
-//char grade;
-//if (testScore >= 90) {
-//grade = 'A';
-//} else if (testScore >= 80) {
-//grade = 'B';
-//} else if (testScore >= 70) {
-//grade = 'C';
-//} else if (testScore >= 60) {
-//grade = 'D';
-//} else {
-//grade = 'F';
-//}
-//System.out.println("Grade = " + grade)
