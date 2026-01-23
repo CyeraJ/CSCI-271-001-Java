@@ -28,7 +28,7 @@
 * Cyera John
 * W30707056
 ********************************************************************/
-import java.util.Scanner;
+import java.util.Scanner; //obtained from course notes
 
 public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course notes */
 /*****************************<main>****************************
@@ -51,10 +51,10 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course n
 		int x = 0;//initialize x to be used for the loop
 		int totalassign = 0; //initialize totalassign to be used for the loop
 // for loop reads the first 7 numbers then adds them together, totalassign holds the sum
-		for (int i = 0; i < 7; i++) {
-			x = input.nextInt();
-      			assignment[i] = x;
-			totalassign += x;
+		for (int i = 0; i < 7; i++) { //combined array example and input example from class, reads until it hits the 7th number
+			x = input.nextInt(); // grabs the next integer until limit is reached
+      			assignment[i] = x; // stores into array
+			totalassign += x;// add all items in array
     		} 
 		int A = totalassign / 7; // takes the sum in totalassign and divides by 7 to get the average 
 					
@@ -62,47 +62,54 @@ public class CSCI271_Assignment1_CyeraJohn_W30707056 { /* obtained from course n
 		int[] test = new int[7]; //initialize another array limit is 7
 		int y = 0; //initialize y to be used for the loop
 	        int totaltest = 0; //initialize totaltest to be used for the loop
-			for (int i = 0; i < 7; i++) {
-                    		y = input.nextInt();
-        		        test[i] = y;
-                 		totaltest += y;
-            		} 
-		int T = totaltest / 7;
+// for loop reads the first 7 numbers then adds them together, totalassign holds the sum
+		for (int i = 0; i < 7; i++) { //reads next set of 7 numbers increasing
+                  	y = input.nextInt(); // grabs the next integer until limit is reached
+        		test[i] = y; // stores into array
+                 	totaltest += y; // add all items in array
+            	}
+ 
+		int T = totaltest / 7; // takes the sum in totaltest and divides by 7 to get the average
 
-		int M = input.nextInt(); 
-		int F = input.nextInt();			
+		int M = input.nextInt(); //grabs next number
+		int F = input.nextInt(); //grabs final number			
 
 
-		double E = ((0.4 * F)+(0.2 * M)+(0.1 * T))/0.7; //figured out the bug was turning 70 to 0.7
-		double W = ((E-60)/20) * 0.3;
-		double G = 0;
-			if ( E < 60) {
-				G = E;
-				System.out.println(G);
-				System.out.println("Final grade = F");
-			}	 
-			else if ( E < 80 && E >= 60) {
-				G = (1-W) * E + (W*A);
-				if (G <=79 && G >= 60) {
-					System.out.println(G);
-					System.out.println("Final Grade = D");
-				}
-				else {
-					System.out.println(G);
-					System.out.println("Final Grade = C");
-				}
+		double E = ((0.4 * F)+(0.2 * M)+(0.1 * T))/0.7; //figured out the bug the 70 had to change it to 0.7 first calculation for E
+		double W = ((E-60)/20) * 0.3; // takes E-60 and divides it by 20 then multiplies that answer by 30%
+		double G = 0;// initialize G for the below functions
+
+	//if statement of combined test & exam score (E), if it falls below 60 your final grade is F
+		if ( E < 60) {
+			G = E; //grade is the combination score held in E no other calculations
+			System.out.println(G); //prints grade
+			System.out.println("Final grade = F"); //reads out a final grade of F
+		}	 
+	//else-if statement of combined test & exam score (E), if it falls between 60 and 80 your final grade is calculated like so
+		else if ( E < 80 && E >= 60) { 
+			G = (1-W) * E + (W*A); //multiplies E by 1-W calculation and then adds it to the W calculation multiplied by the average of assigments
+	//if statement that differs if G is between 60-69 and 70-79 
+			if (G <=69 && G >= 60) { // if G is between 60-69 it should print the below
+				System.out.println(G); //prints grade
+				System.out.println("Final Grade = D"); //reads out a final grade of D
 			}
-			else if ( E >= 80) {
-				G = (0.4 * F)+(0.2 * M)+(0.1 * T)+(0.3 * A);
-				if (G <= 89 && G >= 80) {
-					System.out.println(G);
-					System.out.println("Final Grade = B");
-				}
-				else {
-					System.out.println(G);
-					System.out.println("Final Grade = A");
-				}
+			else { // if G is between 70-79 it should print the below
+				System.out.println(G); //prints grade
+				System.out.println("Final Grade = C"); //reads out a final grade of C
 			}
+		}
+	// else if statement that will run if E is greater than or equal to 80 & differs if G is between 80-89 and 90-100
+		else if ( E >= 80 && E <= 100) {
+			G = (0.4 * F)+(0.2 * M)+(0.1 * T)+(0.3 * A); //similar to the original E calculation except values are being added together now
+			if (G <= 89 && G >= 80) {//if G is between 80-89 it should print the below
+				System.out.println(G);//prints grade
+				System.out.println("Final Grade = B"); //reads out a final grade of B
+			}
+			else { //if G is between 90-100 it should print the below
+				System.out.println(G);//prints grade
+				System.out.println("Final Grade = A");//reads out a final grade of A
+			}
+		}
 
 	}	
 }
